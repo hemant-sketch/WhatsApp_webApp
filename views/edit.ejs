@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>WhatsApp</title>
+</head>
+<body>
+    <p>Edit your Chat: <%= chat._id %></p>
+    <p>
+        This chat was from @<b><%= chat.from %><b> to @<b><%= chat.to %><b> 
+    </p>
+    <form method="POST" action="/chats/<%= chat._id %>?_method=PUT">
+        <textarea name="message" rows="10" cols="50" ><%= chat.message %></textarea>
+        <br />
+        <button>Edit</button>
+    </form>
+</body>
+</html>
